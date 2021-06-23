@@ -7,6 +7,12 @@
 # A/B
 TARGET_IS_VAB := true
 
+# Overlays
+PRODUCT_PACKAGES += \
+    AliothFrameworks \
+    AliothSettings \
+    AliothSystemUI
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi

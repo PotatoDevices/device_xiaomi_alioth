@@ -19,6 +19,10 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Audio configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 

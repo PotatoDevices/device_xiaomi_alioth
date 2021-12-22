@@ -42,7 +42,7 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 BOARD_SHIPPING_API_LEVEL := 30
 
 # Device Overlays
-DEVICE_PACKAGE_OVERLAYS += \
+PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 # Enable Dynamic Paritions

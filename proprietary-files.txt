@@ -6,6 +6,7 @@ system_ext/lib64/libaptXHD_encoder.so
 
 # HBM-SV
 -system_ext/priv-app/HbmSVManager/HbmSVManager.apk
+-system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
 # Radio (CNE)
 -system_ext/framework/com.quicinc.cne.api-V1.0-java.jar

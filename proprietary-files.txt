@@ -1,3 +1,5 @@
+# Unpinned blobs from hentai_alioth-user 12 SQ1A.211205.008 20211220 release-keys
+
 # Bluetooth (aptX)
 system_ext/lib64/libaptX_encoder.so
 system_ext/lib64/libaptXHD_encoder.so

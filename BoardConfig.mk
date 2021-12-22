@@ -123,8 +123,8 @@ BOARD_SEPOLICY_M4DEFS += \
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
-TARGET_RECOVERY_WIPE := device/xiaomi/alioth/recovery.wipe
-TARGET_RECOVERY_FSTAB := device/xiaomi/alioth/fstab.hardware
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab.hardware
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Enable chain partition for system.

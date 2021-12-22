@@ -116,6 +116,7 @@ TARGET_NO_RECOVERY := true
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_M4DEFS += \
     public_vendor_default_prop=vendor_public_vendor_default_prop \
     sensors_prop=vendor_sensors_prop

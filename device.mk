@@ -100,6 +100,12 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml
 
+# RRO Overlays
+PRODUCT_PACKAGES += \
+    WifiOverlayGourami \
+    ConnectivityOverlayGourami \
+    HbmSVManagerGourami
+
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/fstab.hardware:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.sm8250 \

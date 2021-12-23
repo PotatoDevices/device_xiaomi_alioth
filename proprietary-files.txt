@@ -8,6 +8,12 @@ system_ext/lib64/libaptXHD_encoder.so
 -system_ext/priv-app/HbmSVManager/HbmSVManager.apk
 -system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentOKGoogleCS35L41/HotwordEnrollmentOKGoogleCS35L41.apk
+-product/priv-app/HotwordEnrollmentXGoogleCS35L41/HotwordEnrollmentXGoogleCS35L41.apk
+-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar
+
 # Radio (CNE)
 -system_ext/framework/com.quicinc.cne.api-V1.0-java.jar
 -system_ext/framework/com.quicinc.cne.api-V1.1-java.jar

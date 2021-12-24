@@ -100,6 +100,15 @@ PRODUCT_PACKAGES += \
     qti-telephony-hidl-wrapper \
     qti_telephony_hidl_wrapper.xml
 
+# NFC and Secure Element packages
+PRODUCT_PACKAGES += \
+    NfcNci \
+    Tag \
+    SecureElement
+
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf
+
 # RRO Overlays
 PRODUCT_PACKAGES += \
     WifiOverlayGourami \

@@ -1,0 +1,22 @@
+[
+  {
+    "repository": "device_xiaomi_alioth-firmware",
+    "target_path": "device/xiaomi/alioth-firmware",
+    "remote" : "devices-lab"
+  },
+  {
+    "repository": "device_xiaomi_alioth-kernel",
+    "target_path": "device/xiaomi/alioth-kernel",
+    "remote" : "devices-lab"
+  },
+  {
+    "repository": "vendor_xiaomi_alioth-vendor",
+    "target_path": "vendor/xiaomi/alioth-vendor",
+    "remote" : "devices-lab"
+  },
+  {
+    "repository": "vendor_xiaomi_alioth",
+    "target_path": "vendor/xiaomi/alioth",
+    "remote" : "devices-lab"
+  }
+]

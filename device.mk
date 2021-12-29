@@ -19,6 +19,9 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 

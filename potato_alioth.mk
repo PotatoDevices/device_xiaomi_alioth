@@ -38,8 +38,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common potato stuff.
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
 
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
@@ -48,7 +48,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
-PRODUCT_NAME := lineage_alioth
+PRODUCT_NAME := potato_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MODEL := K40
 
@@ -57,4 +57,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="alioth_global-user 11 RKQ1.200826.002 V12.5.7.0.RKHINXM release-keys"
 
-BUILD_FINGERPRINT := Redmi/alioth/alioth:11/RKQ1.200826.002/V12.5.7.0.RKHINXM:user/release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:12/SQ1A.211205.008/7888514:user/release-keys

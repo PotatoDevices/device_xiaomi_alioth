@@ -1,3 +1,10 @@
+# Device
+ro.product.brand=Redmi
+ro.product.device=alioth
+ro.product.manufacturer=xiaomi
+ro.product.model=M2012K11AC
+ro.product.name=alioth
+
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=

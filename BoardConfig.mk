@@ -114,6 +114,9 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 endif
 TARGET_NO_RECOVERY := true
 
+# OTA assert
+TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
+
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private

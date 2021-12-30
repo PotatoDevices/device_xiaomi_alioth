@@ -41,7 +41,7 @@ BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := alioth
+TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
 
 # Kernel
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on

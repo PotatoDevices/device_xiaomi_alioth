@@ -53,10 +53,11 @@ PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.radio.reboot_on_modem_change=false
 
-# Force voLTE/voWIFI
+# Force voLTE/voWIFI/viLTE
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1
 
 # Set lmkd options
 PRODUCT_PRODUCT_PROPERTIES += \

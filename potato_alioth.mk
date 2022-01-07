@@ -47,10 +47,10 @@ $(call inherit-product, device/xiaomi/alioth/device.mk)
 PRODUCT_BUILD_SUPER_PARTITION := false
 
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := Redmi
+PRODUCT_BRAND := POCO
 PRODUCT_NAME := potato_alioth
 PRODUCT_DEVICE := alioth
-PRODUCT_MODEL := K40
+PRODUCT_MODEL := M2012K11AG
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

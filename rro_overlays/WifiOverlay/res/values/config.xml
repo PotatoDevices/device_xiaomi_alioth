@@ -47,11 +47,17 @@
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,8388608,262144,524288,4194304</string>
 
+    <!-- Wifi driver Automatic channel selection (ACS) for softap to include DFS channels -->
+    <bool translatable="false" name="config_wifiSoftapAcsIncludeDfs">true</bool>
+
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
 
     <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
 
     <!-- True if the firmware supports connected MAC randomization -->
     <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
@@ -65,6 +71,18 @@
     <!-- True if the firmware supports Wi-Fi link probing -->
     <bool name="config_wifi_link_probing_supported">true</bool>
 
+    <!-- Idle Receive current for wifi radio. 0 by default-->
+    <integer translatable="false" name="config_wifi_idle_receive_cur_ma">1</integer>
+
+    <!-- Rx current for wifi radio. 0 by default-->
+    <integer translatable="false" name="config_wifi_active_rx_cur_ma">100</integer>
+
+    <!-- Tx current for wifi radio. 0 by default-->
+    <integer translatable="false" name="config_wifi_tx_cur_ma">250</integer>
+
+    <!-- Operating volatage for wifi radio. 0 by default-->
+    <integer translatable="false" name="config_wifi_operating_voltage_mv">3800</integer>
+
     <!-- Indicates that a full bugreport should be triggered when wifi diagnostics detects an error on non-user (i.e debug) builds -->
     <bool translatable="false" name="config_wifi_diagnostics_bugreport_enabled">true</bool>
 
@@ -73,7 +91,6 @@
 
     <!-- Integer indicating maximum hardware supported client number of soft ap -->
     <integer translatable="false" name="config_wifiHardwareSoftapMaxClientCount">32</integer>
-
     <!-- Array indicating wifi fatal firmware alert error code list from driver -->
     <array translatable="false" name="config_wifi_fatal_firmware_alert_error_code_list">
         <item>1</item>      <!-- WLAN_LOG_REASON_ROAM_FAIL -->
@@ -94,10 +111,8 @@
     <!-- Integer delay in milliseconds before set wlan interface up during watchdog recovery -->
     <integer name="config_wifi_framework_recovery_timeout_delay">3000</integer>
 
-    <!-- Number of self recoveries to be attempted per hour. Any fatal errors beyond this will
-         cause the wifi stack to turn wifi off and wait for user input.
-         Set to 0 to turn off recovery attempts and always turn off wifi on failures -->
-    <integer translatable="false" name="config_wifiMaxNativeFailureSelfRecoveryPerHour">10</integer>
+    <!-- Enable adding minimum confirmation duration when sending network score to connectivity service. -->
+    <bool translatable="false" name="config_wifiMinConfirmationDurationSendNetworkScoreEnabled">true</bool>
 
     <!-- Wifi driver supports IEEE80211AX for softap -->
     <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
@@ -114,30 +129,18 @@
     <!-- Wifi driver supports WPA3 Simultaneous Authentication of Equals (WPA3-SAE) for softap -->
     <bool translatable="false" name="config_wifi_softap_sae_supported">true</bool>
 
-    <!-- Override channel utilization estimation with fixed value, disabled in brcm-based pixels -->
-    <bool translatable="false" name="config_wifiChannelUtilizationOverrideEnabled">false</bool>
-
-    <!-- Enable adding minimum confirmation duration when sending network score to connectivity service. -->
-    <bool translatable="false" name="config_wifiMinConfirmationDurationSendNetworkScoreEnabled">true</bool>
-
-    <!-- Enable concurrent STA + STA peer to peer + internet connectivity -->
+    <!-- b/173044646 (does not apply to kona?): Enable STA + STA use-cases for teamfooding/testing.
+         HAL also needs to support STA + STA iface combination for the feature to be enabled.
+         So STA + STA will not get enabled on all devices because of this overlay alone.
+         Remove before Android 12 release! -->
     <bool translatable="false" name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">true</bool>
-
-    <!-- Enable concurrent STA + STA MBB support -->
     <bool translatable="false" name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled">true</bool>
 
-    <!-- Enable concurrent Bridged access point (AP) support -->
-    <bool translatable="false" name="config_wifiBridgedSoftApSupported">true</bool>
+    <!-- Disable channel utilization estimation with fixed value.
+         b/160239223: Rx time is excluded in cca busy time and channel utilization is calculated
+         correctly during heavy DL traffic -->
+    <bool translatable="false" name="config_wifiChannelUtilizationOverrideEnabled">false</bool>
 
-    <!-- Enable concurrent STA + Bridged access point (AP) support -->
-    <bool translatable="false" name="config_wifiStaWithBridgedSoftApConcurrencySupported">true</bool>
-
-    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
-    <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
-
-    <!-- Enable the default coex channel avoidance algorithm and disable the functionality of
-         WifiManager#setCoexUnsafeChannels. -->
-    <bool translatable="false" name="config_wifiDefaultCoexAlgorithmEnabled">true</bool>
     <!-- Whether to use the explicit vendor HAL API: IWifiStaIface.setRoamingState for disabling fw roaming. -->
     <bool translatable="false" name="config_wifiUseHalApiToDisableFwRoaming">true</bool>
 </resources>

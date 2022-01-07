@@ -43,6 +43,9 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Assert
 TARGET_OTA_ASSERT_DEVICE := alioth
 
+# Board Info
+TARGET_BOARD_INFO_FILE := device/xiaomi/alioth/board-info.txt
+
 # Kernel
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += androidboot.hardware=gourami androidboot.hardware.platform=sm8250

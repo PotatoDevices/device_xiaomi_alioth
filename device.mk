@@ -24,7 +24,7 @@ PRODUCT_SOONG_NAMESPACES += \
     device/xiaomi/alioth \
     hardware/google/av \
     hardware/google/interfaces \
-    hardware/google/pixel \
+    hardware/google/pixel
 
 include build/make/target/product/iorap_large_memory_config.mk
 
@@ -70,7 +70,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Set thermal warm reset
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.thermal_warmreset = true \
+    ro.thermal_warmreset = true
 
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \

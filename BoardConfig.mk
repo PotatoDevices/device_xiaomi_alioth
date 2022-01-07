@@ -115,6 +115,7 @@ endif
 TARGET_NO_RECOVERY := true
 
 # Sepolicy
+TARGET_SEPOLICY_DIR := kona
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_SEPOLICY_M4DEFS += \

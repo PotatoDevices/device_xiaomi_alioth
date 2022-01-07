@@ -1,4 +1,4 @@
-# Unpinned blobs from hentai_alioth-user 12 SQ1A.211205.008 20211220 release-keys
+# Unpinned blobs from hentai_alioth-user 12 SQ1A.220105.002 20220105 release-keys
 
 # Bluetooth (aptX)
 system_ext/lib64/libaptX_encoder.so
@@ -9,10 +9,10 @@ system_ext/lib64/libaptXHD_encoder.so
 -system_ext/etc/permissions/privapp-permissions-google-se.xml:system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml
 
 # HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleCS35L41/HotwordEnrollmentOKGoogleCS35L41.apk
--product/priv-app/HotwordEnrollmentXGoogleCS35L41/HotwordEnrollmentXGoogleCS35L41.apk
--system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
--system_ext/framework/com.android.hotwordenrollment.common.util.jar
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Radio (CNE)
 -system_ext/framework/com.quicinc.cne.api-V1.0-java.jar
@@ -23,12 +23,15 @@ system_ext/lib64/libaptXHD_encoder.so
 -system_ext/framework/vendor.qti.data.factory-V1.0-java.jar
 -system_ext/framework/vendor.qti.data.factory-V2.0-java.jar
 -system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
+-system_ext/framework/vendor.qti.data.factory-V2.2-java.jar
 -system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.cne.internal.server-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.connection-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
+-system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar
+-system_ext/framework/vendor.qti.hardware.slmadapter-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
 system_ext/lib/com.quicinc.cne.api@1.0.so
 system_ext/lib/com.quicinc.cne.api@1.1.so
@@ -82,6 +85,7 @@ product/etc/permissions/RemoteSimlockManager.xml
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
 product/etc/permissions/UimService.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
 system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/com.qualcomm.qcrilmsgtunnel.xml
 system_ext/etc/permissions/google-ril.xml
@@ -143,6 +147,7 @@ system_ext/etc/permissions/org_codeaurora_ims.xml
 -system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 -system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
 system_ext/lib/com.qualcomm.qti.imscmservice@1.0.so
 system_ext/lib/com.qualcomm.qti.imscmservice@2.0.so

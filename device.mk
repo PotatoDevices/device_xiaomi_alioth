@@ -128,6 +128,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.recovery.device.rc:recovery/root/init.recovery.gourami.rc
 
+# Regulatory
+PRODUCT_PACKAGES += \
+    SafetyRegulatoryInfo \
+    SettingsOverlayM2012K11AG \
+    SettingsOverlayM2012K11AI
+
 #################################################################################
 # This is the Start of device-alioth.mk AB configuration.
 #################################################################################

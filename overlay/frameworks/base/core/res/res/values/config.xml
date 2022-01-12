@@ -25,4 +25,32 @@
     <string-array name="config_vendorPlatformSignatures">
         <item>3082048b30820373a0030201020214660379da9a99a064e90a6eddd231ad079a4a7d99300d06092a864886f70d01010b05003081d4310b3009060355040613024a50310e300c06035504080c05546f6b796f310e300c06035504070c05546f6b796f312a3028060355040a0c215261706869656c7363617065204c4c432e20616e6420486172756b61204c4c432e312a3028060355040b0c215261706869656c7363617065204c4c432e20616e6420486172756b61204c4c432e312a302806035504030c215261706869656c7363617065204c4c432e20616e6420486172756b61204c4c432e3121301f06092a864886f70d01090116126c6567616c4068656e7461696f732e636f6d301e170d3230313032383130353035325a170d3438303331353130353035325a3081d4310b3009060355040613024a50310e300c06035504080c05546f6b796f310e300c06035504070c05546f6b796f312a3028060355040a0c215261706869656c7363617065204c4c432e20616e6420486172756b61204c4c432e312a3028060355040b0c215261706869656c7363617065204c4c432e20616e6420486172756b61204c4c432e312a302806035504030c215261706869656c7363617065204c4c432e20616e6420486172756b61204c4c432e3121301f06092a864886f70d01090116126c6567616c4068656e7461696f732e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100c4dfaf9939ddbaec6fc02620791867c56e555b4a885f75b42149878c706694733963789a29e491a73dda376f58e4ac712e6935136599460277dc10e15b3838b59d435cc9960dcc075f03b4a6479e8ebc138600dcb3e5ac2fa874bc4fab284cbdb94198dec9185acf0bea5db680acf56d9ab75980beed4ed66d1ea4b337625e72de0ae90fa24e5f4fd5af8d283acf7766d572a7995ed3f261dd5fa222b4670160c609553cb38aae5567e377cb354630c3f60b28ab7c35881775a0fdecf729326e2399cffd59c17d46832c949380b6c6d36505d330e300118eadc115041e294f48917f02057f2e97f0fd711ea87b30548d67ff07f3047b9a6f5323170ab1bab3c90203010001a3533051301d0603551d0e04160414ce681fc5abc1b1b991c81d0485359da7e0eafb1d301f0603551d23041830168014ce681fc5abc1b1b991c81d0485359da7e0eafb1d300f0603551d130101ff040530030101ff300d06092a864886f70d01010b0500038201010019d8ea858faecd8576950aae5c47bf54a827896cbd34960d8eaab56bca51acb8d76a0de8b27e03c2c5eee1fc68b28e6d04653985a7476bca7513dbc479235bf5bf7bd25d90f1700e8e932238972a50e3c17d2281af1c64ecfcbd121194028590b18915c60873b65a1e1b07b438fcd0d59ad660a0da443fccb47c1f45cf4be71abb0ab18d067793fca5460fb9ccd456b750d84146ec601f06f898cadbd6c65430a445cbbe47c7366b6f852a965fa9021202b18ff9f06c1aee202719b2c77f25dae1db8797b705bc44b73dc5ae0509109bebba6786c7a2f3901ed3b84de79444077a7d4840f4070dac9b7f626a2dd7d7c950fd196e87e56e85367dfc10b08965fa</item>
     </string-array>
+
+    <!-- Whether WiFi display is supported by this device.
+         There are many prerequisites for this feature to work correctly.
+         Here are a few of them:
+         * The WiFi radio must support WiFi P2P.
+         * The WiFi radio must support concurrent connections to the WiFi display and
+           to an access point.
+         * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
+           remote submix module.  This module is used to record and stream system
+           audio output to the WiFi display encoder in the media server.
+         * The remote submix module "audio.r_submix.default" must be installed on the device.
+         * The device must be provisioned with HDCP keys (for protected content).
+    -->
+    <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Set to true if the wifi display supports compositing content stored
+         in gralloc protected buffers.  For this to be true, there must exist
+         a protected hardware path for surface flinger to composite and send
+         protected buffers to the wifi display video encoder.
+
+         If this flag is false, we advise applications not to use protected
+         buffers (if possible) when presenting content to a wifi display because
+         the content may be blanked.
+
+         This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
+         flag is set for wifi displays.
+    -->
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 </resources>

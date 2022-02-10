@@ -34,6 +34,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 TARGET_PRODUCT_PROP := $(LOCAL_PATH)/product.prop
 
+# Optimize everything for preopt
+PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
+# Don't preopt prebuilts
+DONT_DEXPREOPT_PREBUILTS := true
+
+# Package Manager
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.boot=verify \
+    pm.dexopt.first-boot=quicken \
+    pm.dexopt.install=speed-profile \
+    pm.dexopt.bg-dexopt=everything \
+    pm.dexopt.ab-ota=quicken
+
+# Dex
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-cpu-set=1,2,3,4,5,6,7 \
+    dalvik.vm.boot-dex2oat-threads=7 \
+    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.image-dex2oat-threads=8
+
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 30

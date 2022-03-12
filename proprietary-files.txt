@@ -14,6 +14,9 @@ system_ext/lib64/libaptXHD_encoder.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
+# Latency
+-system_ext/framework/vendor.qti.latency-V2.0-java.jar
+
 # Radio (CNE)
 -system_ext/framework/com.quicinc.cne.api-V1.0-java.jar
 -system_ext/framework/com.quicinc.cne.api-V1.1-java.jar

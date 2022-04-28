@@ -175,6 +175,11 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 # Disable AVB verity
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flag 3
 
+# This should have been included in BoardConfigMainlineCommon.mk, but custom
+# ROMs moved this flag to BoardConfigEmuCommon.mk to allow resulting system
+# partitions to be mounted read/write. Such a world.
+BOARD_EXT4_SHARE_DUP_BLOCKS := true
+
 # dynamic partition
 BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions

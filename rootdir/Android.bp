@@ -47,6 +47,18 @@ sh_binary {
     vendor: true,
 }
 
+// libinit
+cc_library_static {
+    name: "libinit_alioth",
+    recovery_available: true,
+    shared_libs: ["libbase"],
+    srcs: ["bin/init_alioth.cpp"],
+    include_dirs: [
+        "system/core/init",
+        "system/libbase/include"
+    ]
+}
+
 // fstab
 prebuilt_etc {
     name: "fstab.qcom",

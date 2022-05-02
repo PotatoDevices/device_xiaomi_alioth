@@ -6,6 +6,23 @@
 
 DEVICE_PATH := device/xiaomi/alioth
 
+# A/B
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    odm \
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot
+
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 

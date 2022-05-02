@@ -89,5 +89,10 @@ BOARD_VENDOR := xiaomi
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := kona
 
+# Recovery
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_USERIMAGES_USE_F2FS := true
+
 # Inherit the proprietary files
 include vendor/xiaomi/alioth/BoardConfigVendor.mk

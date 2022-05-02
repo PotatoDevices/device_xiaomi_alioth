@@ -120,6 +120,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstdc++.vendor
 
+# Consumer IR
+PRODUCT_PACKAGES += \
+    android.hardware.ir@1.0-impl \
+    android.hardware.ir@1.0-service
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

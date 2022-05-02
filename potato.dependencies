@@ -1,5 +1,9 @@
 [
   {
+    "repository": "hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+  },
+  {
     "repository": "kernel_xiaomi_sm8250",
     "target_path": "kernel/xiaomi/sm8250"
   },

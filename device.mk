@@ -163,6 +163,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0.vendor
+
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.1.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -182,6 +191,10 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
@@ -195,6 +208,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
+
+# Neural networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # NFC
 PRODUCT_PACKAGES += \

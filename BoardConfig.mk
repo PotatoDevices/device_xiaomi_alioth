@@ -45,6 +45,9 @@ endif
 # Assert
 TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 

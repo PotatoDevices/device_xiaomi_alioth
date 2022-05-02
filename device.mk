@@ -182,6 +182,13 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor:32 \
     libcodec2_vndk.vendor:32
 
+# Net
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

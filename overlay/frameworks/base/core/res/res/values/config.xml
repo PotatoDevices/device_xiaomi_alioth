@@ -62,6 +62,16 @@
     <!-- Screen brightness when dozing. -->
     <integer name="config_screenBrightnessDoze">34</integer>
 
+    <!-- Whether the always on display mode is available. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Disable AOD by default -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- True if the display hardware only has brightness buckets rather than a full range of
+         backlight values -->
+    <bool name="config_displayBrightnessBucketsInDoze">true</bool>
+
     <!-- Default screen brightness for VR setting. Target default value: 0x0BB for EVT1.1. -->
     <!-- 8 bit brightness level of 6 corresponds to the 10 bit brightness level of 0x0B6,
          8 bit brightness level of 7 corresponds to the 10 bit brightness level of 0x0C1 on EVT1.1. -->
@@ -100,30 +110,6 @@
         <item>1300.0</item>
     </array>
 
-    <!-- Nonlinear coefficients for maximum panel brightness of 500 nits -->
-    <string-array name="config_reduceBrightColorsCoefficientsNonlinear">
-        <!-- a-coefficient --> <item>-0.4553233597</item>
-        <!-- b-coefficient --> <item>-0.2380196976</item>
-        <!-- y-intercept --> <item>0.9801096801</item>
-    </string-array>
-
-    <!-- Linear coefficients for maximum panel brightness of 500 nits -->
-    <string-array name="config_reduceBrightColorsCoefficients">
-        <!-- a-coefficient --> <item>0.0</item>
-        <!-- b-coefficient --> <item>-0.96</item>
-        <!-- y-intercept --> <item>1.0</item>
-    </string-array>
-
-    <!-- Whether the always on display mode is available. -->
-    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-
-    <!-- Disable AOD by default -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
-
-    <!-- True if the display hardware only has brightness buckets rather than a full range of
-         backlight values -->
-    <bool name="config_displayBrightnessBucketsInDoze">true</bool>
-
     <!-- The default refresh rate. alioth manages this using the peak refresh rate setting, so set
          this value to 0 so it has no effect. -->
     <integer name="config_defaultRefreshRate">0</integer>
@@ -133,34 +119,6 @@
 
     <!-- default refresh rate in the zone defined by brightness and ambient thresholds -->
     <integer name="config_defaultRefreshRateInZone">120</integer>
-
-    <!-- Default refresh rate while the device has high brightness mode enabled for HDR. -->
-    <integer name="config_defaultRefreshRateInHbmHdr">60</integer>
-
-    <!-- Not allow to switch to higher refresh rate when display brightness setting is
-         equal or less than this value -->
-    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
-        <item>7</item> <!-- 33% UI brightness -->
-        <item>11</item> <!-- 45% UI brightness -->
-    </integer-array>
-
-    <integer-array name="config_ambientThresholdsOfPeakRefreshRate">
-        <item>-1</item>
-        <item>30</item>
-    </integer-array>
-
-    <!-- Switch to fixed refresh rate when display brightness setting is
-         equal or more than this value -->
-    <integer-array name="config_highDisplayBrightnessThresholdsOfFixedRefreshRate">
-        <item>255</item> <!-- 100% UI brightness -->
-    </integer-array>
-
-    <integer-array name="config_highAmbientBrightnessThresholdsOfFixedRefreshRate">
-        <item>50000</item>
-    </integer-array>
-
-    <!-- default refresh rate in the high zone defined by birghtness and ambient thresholds -->
-    <integer name="config_fixedRefreshRateInHighZone">120</integer>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -493,6 +451,7 @@
         <item>2</item> <!-- COLOR_MODE_SATURATED -->
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
+
     <integer-array name="config_displayCompositionColorSpaces">
         <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
         <item>0</item> <!-- COLOR_MODE_DEFAULT    -->

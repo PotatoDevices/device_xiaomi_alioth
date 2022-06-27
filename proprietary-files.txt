@@ -1,4 +1,4 @@
-# Unpinned blobs from alioth-user 12 SP2A.220505.002 20220503 release-keys
+# Unpinned blobs from alioth-user 12 SQ3A.220605.009.A1 8643238 release-keys
 
 # Bluetooth (aptX)
 system_ext/lib64/libaptX_encoder.so
